@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <!-- table for the calculator -->
+    <table id="calculator">
+        <tr>
+            <td colspan="3">
+                <!-- Input field to display the result -->
+                <input type="text" id="result">
+            </td>
+
+            <td><input type="button" value="c" onclick="clearResult()"></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="7" onclick="appendValue('7')"></td>
+            <td><input type="button" value="8" onclick="appendValue('8')"></td>
+            <td><input type="button" value="9" onclick="appendValue('9')"></td>
+            <td><input type="button" value="/" onclick="appendValue('/')"></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="4" onclick="appendValue('4')"></td>
+            <td><input type="button" value="5" onclick="appendValue('5')"></td>
+            <td><input type="button" value="6" onclick="appendValue('6')"></td>
+            <td><input type="button" value="*" onclick="appendValue('*')"></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="1" onclick="appendValue('1')"></td>
+            <td><input type="button" value="2" onclick="appendValue('2')"></td>
+            <td><input type="button" value="3" onclick="appendValue('3')"></td>
+            <td><input type="button" value="-" onclick="appendValue('-')"></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="0" onclick="appendValue('0')"></td>
+            <td><input type="button" value="." onclick="appendValue('.')"></td>
+            <!-- Equal button to calculate the result -->
+            <td><input type="button" value="=" onclick="calculateResult()"></td>
+            <td><input type="button" value="+" onclick="appendValue('+')"></td>
+        </tr>
+    </table>
+
+    <!-- Container to display calculation history -->
+    <div id="history"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
